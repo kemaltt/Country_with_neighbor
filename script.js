@@ -1,9 +1,9 @@
 const counteriesContainer = document.querySelector(".countries");
 
 function renderCountry(data) {
-    const content = `<div class="card country " style="width: 18rem">
+    const content = `<div class="card country mx-auto " style="width: 18rem">
     <img class="country-image card-img-top" src="${data.flag}" alt="" />
-    <div class="country-data card-body">
+    <div class="country-data card-body  ">
         <h5 class="country-name card-title">${data.name}</h5>
         <h6 class="country-name card-title">${data.region}</h6>
        
