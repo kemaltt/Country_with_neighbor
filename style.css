@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient( to right, rgba(0, 3, 5, 0.52), rgba(1, 24, 32, 0.73)), url(./image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-shadow: 3px 3px 3px black;
+}
+
+.countries {
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.country {
+    margin: 10px;
+}
+
+span {
+    margin-right: 10px;
+}
