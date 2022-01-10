@@ -6,10 +6,19 @@ function renderCountry(data) {
     <div class="country-data card-body">
         <h5 class="country-name card-title">${data.name}</h5>
         <h6 class="country-name card-title">${data.region}</h6>
-        <p class="country-row card-text"><span><i class="fas fa-2x fa-landmark"></i></span>${data.capital}</p>
-        <p class="country-row card-text"><span><i class="fas fa-lg fa-users"></i></span>${data.population}</p>
-        <p class="country-row card-text"><span><i class="fas fa-lg fa-comments"></i></span>${data.languages[0].name}</p>
-        <p class="country-row card-text"><span><i class="fas fa-lg fa-money-bill-wave"></i></span>${data.currencies[0].name}</p>
+       
+        <p class="country-row card-text"><span><i class="fas fa-2x fa-landmark"></i></span>${
+          data.capital
+        }</p>
+        <p class="country-row card-text"><span><i class="fas fa-lg fa-users"></i></span>${(
+          +data.population / 1_000_000
+        ).toFixed(1)}M People</p>
+        <p class="country-row card-text"><span><i class="fas fa-lg fa-comments"></i></span>${
+          data.languages[0].name
+        }</p>
+        <p class="country-row card-text"><span><i class="fas fa-lg fa-money-bill-wave"></i></span>${
+          data.currencies[0].name
+        }  <strong>${data.currencies[0].symbol}</strong></p>
     </div>
 </div>`;
     counteriesContainer.insertAdjacentHTML("beforeend", content);
