@@ -1,7 +1,9 @@
 const counteriesContainer = document.querySelector(".countries");
 
 function renderCountry(data) {
-    const content = `<div class="card country mx-auto " style="width: 18rem">
+    const content = `
+   
+    <div class="card country mx-auto " style="width: 18rem">
     <img class="country-image card-img-top" src="${data.flag}" alt="" />
     <div class="country-data card-body  ">
         <h5 class="country-name card-title">${data.name}</h5>
@@ -73,10 +75,14 @@ const searchBtn = document.querySelector(".btn");
 console.log(searchBtn);
 const inputText = document.querySelector("#input");
 console.log(inputText);
+const tryAgain = document.querySelector(".try-again");
+
 searchBtn.addEventListener("click", () => {
     const countryVal = inputText.value.toLowerCase().trim();
     console.log(countryVal);
     getCountryData(countryVal);
+    console.log(span);
+    tryAgain.innerHTML = ` <a style="color: greenyellow" href="./index.html"> Try another </a>`;
 });
 
 inputText.addEventListener("keyup", function(e) {
@@ -84,6 +90,7 @@ inputText.addEventListener("keyup", function(e) {
         const countryVal = inputText.value.toLowerCase().trim();
         getCountryData(countryVal);
         console.log(countryVal);
+        tryAgain.innerHTML = ` <a style="color: greenyellow;" href="./index.html"> Try another</a>`;
         // inputText.value = "";
     }
 });
